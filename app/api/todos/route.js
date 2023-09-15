@@ -1,5 +1,5 @@
-import { connectToDB } from '../../../utils/database';
-import Todo from '../../../Models/todos';
+import { connectToDB } from '@/utils/database';
+import Todo from '@/Models/todos';
 
 export const GET = async (request) => {
     console.log("GET transactions route was hit");

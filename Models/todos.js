@@ -5,7 +5,7 @@ const TodoSchema = new Schema({
         type: String,
         required: [true, 'An item to do is needed']
     },
-    done: {
+    status: {
         type: Boolean,
         default: false
     },

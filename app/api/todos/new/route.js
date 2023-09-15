@@ -1,19 +1,15 @@
-import { connectToDB } from '@utils/database';
-import Todo from '../../../models/transactions';
+import { connectToDB } from '@/utils/database';
+import Todo from '@/Models/todos';
 
 export const POST = async (req) => {
-    console.log("trxn route was hit");
-    const{ 
-            item,
-            done,
-            time
-        } = await req.json();
+    console.log("todo route was hit");
+    const{ item, status, time } = await req.json();
     
     try{
         await connectToDB();
         const newTodo = new Todo({
             item,
-            done,
+            status,
             time
         });
         await newTodo.save();

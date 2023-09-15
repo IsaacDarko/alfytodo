@@ -13,12 +13,11 @@ const TodoList = ({ data }) => {
         </div>
 
 
-        <div className=" todolist mt-8 prompt_layout">
+        <div className=" todocard mt-8 prompt_layout">
         {data.map((todo) => (
             <TodoCard 
             key={todo._id}
-            item={todo.item}
-            
+            todo={todo}            
             />
         ))}
 
